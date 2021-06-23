@@ -1,3 +1,116 @@
+/* GENERAL */
 body {
   font-family: "Raleway", sans-serif;
+  text-align: left;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+button {
+  height: 50px;
+  border-radius: 20px;
+  border: 3px solid #f2f2f2;
+  background-color: white;
+}
+h4 {
+  color: grey;
+}
+h5 {
+  font-size: 1em;
+}
+
+/* HEADER */
+header img {
+  width: 15%;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  text-decoration: none;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+nav li a {
+  padding: 20px 10px 0 10px;
+  text-decoration-line: none;
+}
+nav li:hover {
+  text-decoration: overline;
+}
+
+/* Presentation */
+
+/* HEBERGEMENT */
+#hebergement {
+  display: flex;
+}
+.post img {
+  width: 150px;
+  height: 75px;
+  border-radius: 20px 20px 0 0;
+}
+.postpop img {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px 0 0 20px;
+}
+article {
+  display: flex;
+  width: 75%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+.description {
+  display: flex;
+  flex-direction: row;
+}
+.ligne {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/* ACTIVITES */
+#activites {
+  display: flex;
+  flex-direction: row;
+}
+.img-simple img {
+  width: 150px;
+  height: 250px;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+}
+.img-double img {
+  width: 150px;
+  height: 100px;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+}
+.table {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f2f2f2;
 }
