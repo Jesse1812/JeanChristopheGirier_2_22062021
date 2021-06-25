@@ -14,6 +14,10 @@ button {
 h2 {
   padding-left: 10px;
 }
+h3 {
+  font-weight: bold;
+  font-size: 1.2em;
+}
 h4 {
   color: grey;
 }
@@ -54,8 +58,10 @@ nav li:hover {
 /* Presentation */
 .bouton {
   height: 40px;
-
   border: white;
+}
+#presentation h2 {
+  padding: 0;
 }
 .filtres button {
   border-radius: 10px;
@@ -73,13 +79,15 @@ nav li:hover {
   display: flex;
   align-items: flex-start;
 }
+
+/* 1) SECTION GAUCHE */
 article {
   display: flex;
   width: 70%;
   flex-direction: row;
   flex-wrap: wrap;
   background-color: #f2f2f2;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-right: 20px;
 }
 .post {
@@ -88,7 +96,7 @@ article {
   border: 3px grey;
   margin: auto;
   width: 200px;
-  border-radius: 10px;
+  border-radius: 20px;
   margin: 10px;
 }
 .post img {
@@ -104,34 +112,35 @@ article {
   justify-content: space-between;
   margin: 10px;
 }
+
+/* 2) SECTION DROITE */
 aside {
   display: flex;
   flex-wrap: wrap;
   width: 30%;
   background-color: #f2f2f2;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-left: 10px;
 }
 .postpop {
   display: flex;
-  height: 110px;
-  padding: 10px;
+  justify-content: left;
+  align-items: center;
+  padding: 10px 5px 0 5px;
   background-color: white;
   border: 3px grey;
-  max-width: 300px;
-  margin: auto;
-  border-radius: 10px;
-  display: flex;
+  border-radius: 20px;
+  min-width: 260px;
+  margin: 20px;
 }
 .postpop img {
   width: 80px;
-  height: 80px;
+  height: 100px;
   border-radius: 20px 0 0 20px;
   object-fit: cover;
 }
 .description {
-  display: flex;
-  flex-direction: column;
+  padding-left: 10px;
 }
 
 /* ACTIVITES */
