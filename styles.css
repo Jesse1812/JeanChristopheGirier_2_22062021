@@ -23,12 +23,13 @@ h4 {
 }
 h5 {
   font-size: 1em;
-  text-align: center;
+  text-align: left;
+  margin-left: 10px;
 }
 p {
   font-weight: bold;
 }
-.wrapper {
+#wrapper {
   max-width: 1200px;
 }
 
@@ -89,6 +90,7 @@ article {
   background-color: #f2f2f2;
   border-radius: 20px;
   margin-right: 20px;
+  height: 600px;
 }
 .post {
   background-color: white;
@@ -114,10 +116,12 @@ article {
 }
 
 /* 2) SECTION DROITE */
+
 aside {
   display: flex;
   flex-wrap: wrap;
   width: 30%;
+  height: 600px;
   background-color: #f2f2f2;
   border-radius: 20px;
   margin-left: 10px;
@@ -126,12 +130,12 @@ aside {
   display: flex;
   justify-content: left;
   align-items: center;
-  padding: 10px 5px 0 5px;
+  padding: 10px;
   background-color: white;
   border: 3px grey;
   border-radius: 20px;
   min-width: 260px;
-  margin: 20px;
+  margin: 10px;
 }
 .postpop img {
   width: 80px;
@@ -144,16 +148,39 @@ aside {
 }
 
 /* ACTIVITES */
-
-.table {
+.galerie {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 400px;
+  padding-bottom: 40px;
 }
-.table img {
-  height: 200px;
-  width: auto;
+.box1 img {
+  width: 250px;
+  height: 340px;
   border-radius: 20px 20px 0 0;
   object-fit: cover;
+  margin-top: 10px;
+}
+.box2 img {
+  width: 250px;
+  height: 130px;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+  margin-top: 10px;
+}
+.box1,
+.box2 {
+  height: 400px;
+  margin-right: 20px;
+  border-bottom: 3px solid #f2f2f2;
+  border-radius: 20px;
+  box-shadow: 5px 0 5px #f2f2f2;
+}
+.shadow-box {
+  border-bottom: 3px solid #f2f2f2;
+  box-shadow: 10px 10px 5px #f2f2f2;
+  border-radius: 20px;
 }
 
 /* FOOTER */

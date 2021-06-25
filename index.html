@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <div class="wrapper">
+    <div id="wrapper">
       <header>
         <nav>
           <img src="images/Reservia@3x.png" />
@@ -153,13 +153,15 @@
               <i class="fas fa-star"></i>
             </div>
           </div>
-          <div class="ligne">
+          <!--<a class="ligne">
             <h3>Afficher plus</h3>
-          </div>
+          </div> -->
         </article>
 
         <aside>
-          <h2>Les plus populaires<i class="fas fa-chart-line"></i></h2>
+          <h2>Les plus populaires
+            <i class="fas fa-chart-line"></i>
+          </h2>
           <div class="postpop">
             <a href="#">
               <img
@@ -168,7 +170,7 @@
               />
             </a>
             <div class="description">
-              <h3>Hôtel Le soleil du matin</h3>
+              <h3>Hôtel Le soleil du </br>matin</h3>
               <p>Nuit à partir de 128€</p>
               <div>
                 <i class="fas fa-star"></i>
@@ -222,16 +224,18 @@
 
       <h2>Activités à Marseille</h2>
       <section id="activites">
-        <div class="table">
-          <a href="#">
-            <img
-              src="images/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
-              alt="vieux-port"
-            />
-          </a>
-          <h5>Vieux Port</h5>
-
-          <div>
+        <div class="galerie">
+          <div class="box1">
+            <a href="#">
+              <img
+                src="images/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
+                alt="vieux-port"
+              />
+            </a>
+            <h5>Vieux Port</h5>
+          </div>
+          <div class="box2">
+            <div class="shadow-box">
             <a href="#">
               <img
                 src="images/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
@@ -239,8 +243,7 @@
               />
             </a>
             <h5>Fort de Pomègues</h5>
-          </div>
-          <div>
+            </div>
             <a href="#">
               <img
                 src="images/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
@@ -249,37 +252,32 @@
             </a>
             <h5>Iles du Frioul</h5>
           </div>
-        </div>
-
-        <div class="table">
-          <a href="#">
-            <img
-              src="images/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
-              alt="calanques"
-            />
-          </a>
-          <h5>Parc National des Calanques</h5>
-
-          <div>
-            <div>
-              <a href="#">
-                <img
-                  src="images/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-                  alt="la-bonne-mere"
-                />
-              </a>
-              <h5>Notre Dame de la Garde</h5>
-
-              <div>
-                <a href="#">
-                  <img
-                    src="images/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
-                    alt="parc-longchamp"
-                  />
-                </a>
-                <h5>Parc Longchamp</h5>
-              </div>
+          <div class="box1">
+            <a href="#">
+              <img
+                src="images/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
+                alt="calanques"
+              />
+            </a>
+            <h5>Parc National des Calanques</h5>
+          </div>
+          <div class="box2">
+            <div class="shadow-box">
+            <a href="#">
+              <img
+                src="images/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                alt="la-bonne-mere"
+              />
+            </a>
+            <h5>Notre Dame de la Garde</h5>
             </div>
+            <a href="#">
+              <img
+                src="images/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
+                alt="parc-longchamp"
+              />
+            </a>
+            <h5>Parc Longchamp</h5>
           </div>
         </div>
       </section>
