@@ -56,23 +56,34 @@ nav li:hover {
   text-decoration: overline;
 }
 
-/* Presentation */
-.bouton {
-  height: 40px;
-  border: white;
-}
+/* PRESENTATION */
+
 #presentation h2 {
   padding: 0;
 }
-.filtres button {
+form input {
+  height: 40px;
+  border: 1px solid white;
+}
+.bouton button {
+  background: #0065fc;
+  color: white;
+  border-radius: 0 20px 20px 0;
+}
+.cercle button {
   border-radius: 10px;
-  height: 30px;
+  height: 40px;
   border: 1px solid lightgray;
   margin: 0 10px 0 10px;
 }
-.filtres i {
+.cercle {
+  width: 40px;
+  heigth: 40px;
   border-radius: 50%;
-  background-color: #f2f2f2;
+  background: #0065fc;
+  text-align: center;
+  color: #deebff;
+  margin-left: 10px;
 }
 
 /* HEBERGEMENT */
@@ -116,7 +127,9 @@ article {
 }
 
 /* 2) SECTION DROITE */
-
+#titre {
+  display: flex;
+}
 aside {
   display: flex;
   flex-wrap: wrap;
@@ -174,17 +187,18 @@ aside {
   height: 400px;
   margin-right: 20px;
   border-bottom: 3px solid #f2f2f2;
-  border-radius: 20px;
-  box-shadow: 5px 0 5px #f2f2f2;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 5px 0 5px -10px #f2f2f2;
 }
 .shadow-box {
   border-bottom: 3px solid #f2f2f2;
-  box-shadow: 10px 10px 5px #f2f2f2;
-  border-radius: 20px;
+  box-shadow: 10px 10px 5px -10px #f2f2f2;
+  border-radius: 0 0 20px 20px;
 }
 
 /* FOOTER */
 footer {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   background-color: #f2f2f2;
