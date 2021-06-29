@@ -145,10 +145,9 @@ aside {
 .postpop {
   display: flex;
   justify-content: left;
-  align-items: center;
+  height: min-content;
   padding: 5px;
   background-color: white;
-  border: 3px grey;
   border-radius: 20px;
   margin: 10px;
   width: 100%;
