@@ -32,10 +32,14 @@ p {
 #wrapper {
   width: 1024px;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 
 /* HEADER */
 header img {
-  width: 15%;
+  width: 10%;
 }
 nav {
   display: flex;
@@ -116,8 +120,10 @@ article {
   flex-wrap: wrap;
   background-color: #f2f2f2;
   border-radius: 20px;
+  height: 650px;
+  align-items: flex-start;
   margin-right: 20px;
-  height: 550px;
+  padding-right: 10px;
 }
 .post {
   background-color: white;
@@ -126,10 +132,11 @@ article {
   width: 200px;
   border-radius: 20px;
   margin: 10px;
+  height: min-content;
 }
 .post img {
   width: 200px;
-  height: 75px;
+  height: 120px;
   border-radius: 20px 20px 0 0;
   object-fit: cover;
 }
@@ -140,7 +147,7 @@ article {
   margin: 10px;
 }
 /* 2) SECTION DROITE */
-#titre {
+.titre {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -151,10 +158,11 @@ aside {
   display: flex;
   flex-wrap: wrap;
   width: 30%;
-  height: 550px;
+  height: 650px;
   background-color: #f2f2f2;
   border-radius: 20px;
   margin-left: 10px;
+  align-items: flex-start;
 }
 .postpop {
   display: flex;
@@ -167,8 +175,8 @@ aside {
   width: 100%;
 }
 .postpop img {
-  width: 80px;
-  height: 100px;
+  width: 105px;
+  height: 130px;
   border-radius: 20px 0 0 20px;
   object-fit: cover;
 }
@@ -203,7 +211,6 @@ aside {
 }
 .box1,
 .box2 {
-  height: 400px;
   margin-right: 20px;
   border-bottom: 3px solid #f2f2f2;
   border-radius: 0 0 20px 20px;
@@ -221,6 +228,7 @@ footer {
   height: 150px;
   display: flex;
   background-color: #f2f2f2;
+  padding: 10px 0 10px 0;
 }
 .box1 {
   width: 30%;
