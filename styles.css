@@ -62,27 +62,31 @@ nav li:hover {
 
 /* PRESENTATION */
 
-#presentation h2 {
-  padding: 0;
-}
-.bouton {
+#presentation {
   width: 100%;
 }
+.bouton form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
 .bouton i {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 45px;
   background-color: #f2f2f2;
   border-radius: 20px 0 0 20px;
-  text-align: center;
-}
-.recherche {
-  height: 40px;
-  border: 3px solid #f2f2f2;
+  display: flex;
+  padding-left: 20px;
+  align-items: center;
 }
 .bouton button {
   background: #0065fc;
   color: white;
   border-radius: 0 20px 20px 0;
+}
+.recherche {
+  height: 40px;
+  border: 3px solid #f2f2f2;
 }
 .filtres {
   display: flex;
