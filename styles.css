@@ -28,6 +28,7 @@ h5 {
 }
 p {
   font-weight: bold;
+  margin-right: 20px;
 }
 #wrapper {
   width: 1024px;
@@ -60,10 +61,11 @@ nav li:hover {
   text-decoration: overline;
 }
 
-/* PRESENTATION */
-
+/* PRESENTATION
+1) Bouton de recherche */
 #presentation {
   width: 100%;
+  padding-bottom: 20px;
 }
 .bouton form {
   width: 100%;
@@ -75,8 +77,8 @@ nav li:hover {
   height: 45px;
   background-color: #f2f2f2;
   border-radius: 20px 0 0 20px;
-  display: flex;
   padding-left: 20px;
+  display: flex;
   align-items: center;
 }
 .bouton button {
@@ -88,25 +90,54 @@ nav li:hover {
   height: 40px;
   border: 3px solid #f2f2f2;
 }
-.filtres {
-  display: flex;
-  flex-direction: row;
+
+/* 2) Filtres */
+#filtres {
   width: 100%;
+  padding-top: 20px;
+  display: inline-flex;
 }
-.cercle button {
-  border-radius: 10px;
+.bouton-filtre {
+  width: 150px;
   height: 40px;
-  border: 1px solid #f2f2f2;
-  margin: 0 10px 0 10px;
+  display: flex;
+  justify-content: space-between;
 }
 .cercle {
+  position: absolute;
+  z-index: 2;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #0065fc;
+  background: #deebff;
   text-align: center;
-  color: #deebff;
+  color: #0065fc;
+  display: flex;
+  align-items: center;
+}
+.bouton-filtre button {
+  z-index: 1;
+  border-radius: 10px;
+  height: 40px;
+  width: 100px;
+  border: 3px solid #f2f2f2;
   margin-left: 10px;
+  margin-right: 20px;
+}
+
+/* 3) Infos */
+#info {
+  display: flex;
+}
+.rond {
+  margin-top: 20px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #f2f2f2;
+  color: #0065fc;
+  display: flex;
+  align-items: center;
 }
 
 /* HEBERGEMENT */
