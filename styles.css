@@ -91,7 +91,7 @@ nav li a:hover {
 }
 .recherche {
   height: 40px;
-  border: 3px solid #f2f2f2;
+  border: 1px solid #f2f2f2;
 }
 
 /* 2) Filtres */
@@ -113,7 +113,10 @@ nav li a:hover {
   height: 40px;
   width: 100px;
   border: 3px solid #f2f2f2;
-  margin-left: 20px;
+  margin-left: 22px;
+}
+.bouton-filtre button:hover {
+  background-color: #deebff;
 }
 .cercle {
   position: absolute;
@@ -164,7 +167,7 @@ article {
 .post {
   background-color: white;
   padding: 5px;
-  border: 3px grey;
+  border: 3px #f2f2f2;
   width: 200px;
   border-radius: 20px;
   margin: 10px;
