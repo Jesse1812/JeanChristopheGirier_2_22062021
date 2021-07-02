@@ -176,7 +176,7 @@ article {
 .post {
   background-color: white;
   padding: 5px;
-  border: 3px #f2f2f2;
+  border: 3px solid #f2f2f2;
   width: 200px;
   border-radius: 20px;
   margin: 10px;
@@ -210,14 +210,14 @@ article {
 }
 
 /* 2) SECTION DROITE */
-.titre {
+.titre-special {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-right: 20px;
 }
-.titre i {
+.titre-special i {
   color: black;
 }
 aside {
@@ -267,7 +267,6 @@ aside {
   flex-direction: column;
   flex-wrap: wrap;
   height: 400px;
-  width: auto;
   padding-bottom: 40px;
 }
 .paysage img {
@@ -315,6 +314,89 @@ footer {
   width: 30%;
 }
 
-/* MEDIA QUERIES */
-@media only screen and (max-width: 320px) {
+/* MEDIA QUERIES 
+1) Tablettes */
+@media only screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+  #presentation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #filtres {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bouton-filtre {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  #hebergement {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+  article {
+    width: 100%;
+    align-items: center;
+    margin-right: 0;
+    height: auto;
+  }
+  .post {
+    width: 100%;
+    border-radius: 20px;
+    margin: 0;
+    height: min-content;
+  }
+  aside {
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    height: auto;
+  }
+  .postpop {
+    justify-content: left;
+    height: auto;
+    width: 100%;
+  }
+  .postpop img {
+    width: auto;
+    height: 130px;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+  }
+  .galerie {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    flex-direction: row;
+  }
+  footer {
+    height: auto;
+    align-items: center;
+  }
+  .titre,
+  .titre-special {
+    text-align: center;
+    display: inline;
+  }
 }
