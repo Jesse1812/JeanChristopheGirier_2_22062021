@@ -35,10 +35,10 @@ a {
   color: black;
   font-weight: bold;
 }
-i {
+i,
+span {
   color: #0065fc;
 }
-
 /* HEADER */
 header img {
   width: 10%;
@@ -112,7 +112,7 @@ button {
   display: flex;
 }
 .bouton-filtre {
-  width: 150px;
+  width: 140px;
   height: 40px;
   display: flex;
   justify-content: space-between;
@@ -122,14 +122,14 @@ button {
 }
 .bouton-filtre button {
   /* c'est la partie de droite des boutons avec le texte */
-  position: relative;
   z-index: 1;
   border-radius: 10px;
   border: 3px solid #f2f2f2;
-  margin-left: 28px;
+  margin-left: 15px;
   height: 40px;
   text-align: center;
-  width: 100px;
+  width: 100%;
+  background-color: white;
 }
 .bouton-filtre button:hover {
   background-color: #deebff;
@@ -144,7 +144,6 @@ button {
   background: #deebff;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 .cercle i {
   margin-left: 13px;
@@ -250,7 +249,7 @@ aside {
   background-color: white;
   border-radius: 20px;
   margin: 10px;
-  width: 100%;
+  width: 250px;
   box-shadow: 1px 10px 5px -10px grey;
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -323,7 +322,7 @@ footer {
 
 /* MEDIA QUERIES 
 1) Tablettes */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (min-width: 520px) {
   body {
     width: 100%;
     margin: 0;
@@ -367,7 +366,6 @@ footer {
     width: 100%;
     align-items: center;
     margin-right: 0;
-    height: auto;
   }
   .post {
     width: 100%;
@@ -377,16 +375,15 @@ footer {
   }
   aside {
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     margin-top: 20px;
-    align-items: center;
-    height: auto;
+    align-items: right;
   }
   .postpop {
     justify-content: left;
     height: auto;
-    width: 100%;
+    width: 400px;
   }
   .postpop img {
     width: auto;
@@ -408,5 +405,33 @@ footer {
   }
   footer {
     justify-content: space-around;
+  }
+}
+
+/* 2) Smartphones */
+@media only screen and (max-width: 520px) {
+  header img {
+    width: 20%;
+    padding-top: 20px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    align-items: flex-end;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+  }
+  nav li a {
+    padding: 20px 10px 0 10px;
+  }
+  nav li a:hover {
+    border-top: 2px solid #0065fc;
+    padding-top: 20px;
+    position: static;
+    color: #0065fc;
   }
 }
