@@ -24,6 +24,9 @@ h5 {
   margin-left: 10px;
   font-weight: bold;
 }
+h6 {
+  display: none;
+}
 p {
   margin-right: 20px;
 }
@@ -113,16 +116,20 @@ button {
   height: 40px;
   display: flex;
   justify-content: space-between;
-  position: relative;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 5px;
 }
 .bouton-filtre button {
   /* c'est la partie de droite des boutons avec le texte */
+  position: relative;
   z-index: 1;
   border-radius: 10px;
-  height: 40px;
-  width: 100px;
   border: 3px solid #f2f2f2;
-  margin-left: 25px;
+  margin-left: 28px;
+  height: 40px;
+  text-align: center;
+  width: 100px;
 }
 .bouton-filtre button:hover {
   background-color: #deebff;
@@ -131,8 +138,8 @@ button {
   /* c'est le rond avec le pictogramme */
   position: absolute;
   z-index: 2;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: #deebff;
   display: flex;
@@ -255,7 +262,7 @@ aside {
   transform: scale(1.1);
 }
 .postpop img {
-  width: 105px;
+  width: 100px;
   height: 130px;
   border-radius: 20px 0 0 20px;
   object-fit: cover;
@@ -308,12 +315,8 @@ footer {
   background-color: #f2f2f2;
   padding: 10px 0 10px 0;
 }
-.box1 {
-  width: 30%;
-}
-.box2 {
-  width: 30%;
-}
+.box1,
+.box2,
 .box3 {
   width: 30%;
 }
@@ -398,13 +401,12 @@ footer {
     height: auto;
     flex-direction: row;
   }
-  footer {
-    height: auto;
-    align-items: center;
-  }
   .titre,
   .titre-special {
     text-align: center;
     display: inline;
+  }
+  footer {
+    justify-content: space-around;
   }
 }
