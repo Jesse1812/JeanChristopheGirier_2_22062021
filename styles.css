@@ -100,6 +100,9 @@ nav li a:hover {
   height: 40px;
   border: 1px solid #f2f2f2;
 }
+#query-portable {
+  display: none;
+}
 
 /* 2) Filtres */
 #filtres p,
@@ -116,15 +119,13 @@ button {
   height: 40px;
   display: flex;
   justify-content: space-between;
-  border: 1px solid white;
-  border-radius: 10px;
   margin: 5px;
 }
 .bouton-filtre button {
   /* c'est la partie de droite des boutons avec le texte */
   z-index: 1;
   border-radius: 10px;
-  border: 3px solid #f2f2f2;
+  border: 1px solid lightgray;
   margin-left: 15px;
   height: 40px;
   text-align: center;
@@ -153,6 +154,10 @@ button {
 #info {
   display: flex;
 }
+#info h4 {
+  margin-top: 20px;
+}
+
 .rond i {
   margin-top: 20px;
   margin-left: 5px;
@@ -161,9 +166,10 @@ button {
   border-radius: 50%;
   border: 1px solid #f2f2f2;
   color: #0065fc;
-  display: flex;
 }
+
 /* HEBERGEMENT */
+
 #hebergement {
   display: flex;
   align-items: flex-start;
@@ -175,11 +181,11 @@ article {
   display: flex;
   width: 70%;
   flex-direction: column;
+  align-items: flex-start;
   flex-wrap: wrap;
   background-color: #f2f2f2;
   border-radius: 20px;
   height: 650px;
-  align-items: flex-start;
   margin-right: 20px;
   padding-right: 10px;
 }
@@ -322,7 +328,7 @@ footer {
 
 /* MEDIA QUERIES 
 1) Tablettes */
-@media only screen and (max-width: 768px) and (min-width: 520px) {
+@media only screen and (max-width: 768px) and (min-width: 360px) {
   body {
     width: 100%;
     margin: 0;
@@ -344,6 +350,9 @@ footer {
   .bouton {
     margin-top: 20px;
   }
+  .bouton-filtre button {
+    margin-left: 25px;
+  }
   #filtres {
     flex-direction: column;
     align-items: center;
@@ -364,21 +373,32 @@ footer {
   }
   article {
     width: 100%;
+    height: auto;
     align-items: center;
     margin-right: 0;
   }
   .post {
-    width: 100%;
+    width: 400px;
     border-radius: 20px;
     margin: 0;
-    height: min-content;
+  }
+  .post img {
+    width: 100%;
+    height: 120px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+  }
+  .ligne {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
   }
   aside {
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
     margin-top: 20px;
-    align-items: right;
+    align-items: center;
   }
   .postpop {
     justify-content: left;
@@ -409,20 +429,21 @@ footer {
 }
 
 /* 2) Smartphones */
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 360px) {
+  #wrapper {
+    width: 360px;
+  }
   header img {
     width: 20%;
     padding-top: 20px;
   }
   nav {
-    display: flex;
-    justify-content: space-between;
-    text-decoration: none;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
   }
   nav ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     list-style-type: none;
   }
   nav li a {
@@ -433,5 +454,115 @@ footer {
     padding-top: 20px;
     position: static;
     color: #0065fc;
+  }
+  #presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #ecrans-grande-taille {
+    display: none;
+  }
+  #query-portable {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: #0065fc;
+    color: white;
+    border-radius: 10px;
+  }
+  #filtres {
+    flex-direction: column;
+    align-items: left;
+  }
+  #hebergement {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 0;
+  }
+  article {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 20px;
+    height: auto;
+    align-items: left;
+    margin-right: 20px;
+    padding-right: 10px;
+  }
+  .post {
+    background-color: white;
+    padding: 5px;
+    border: 3px solid #f2f2f2;
+    width: 100%;
+    border-radius: 20px;
+    margin: 10px;
+    height: min-content;
+  }
+  .post img {
+    width: 100%;
+    height: 120px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+  }
+  .ligne {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  aside {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    margin-left: 10px;
+    align-items: flex-start;
+  }
+  .postpop {
+    display: flex;
+    justify-content: center;
+    height: min-content;
+    padding: 5px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    width: 280px;
+  }
+  .postpop img {
+    width: 100px;
+    height: 130px;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+  }
+  #activites {
+    margin-top: 50px;
+  }
+  .galerie {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    flex-direction: row;
+  }
+  .paysage img {
+    width: 100%;
+    height: 120px;
+  }
+  .portrait img {
+    width: 100%;
+    height: 120px;
+  }
+  footer {
+    flex-direction: column;
+    width: 100%;
+  }
+  .box1,
+  .box2,
+  .box3 {
+    width: 100%;
   }
 }
