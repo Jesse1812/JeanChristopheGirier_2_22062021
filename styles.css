@@ -41,8 +41,11 @@ span {
 }
 /* HEADER */
 header img {
-  width: 10%;
+  width: 20%;
   padding-top: 20px;
+}
+nav h2 {
+  display: none;
 }
 nav {
   display: flex;
@@ -328,7 +331,7 @@ footer {
 
 /* MEDIA QUERIES 
 1) Tablettes */
-@media only screen and (max-width: 768px) and (min-width: 360px) {
+@media only screen and (max-width: 768px) and (min-width: 320px) {
   body {
     width: 100%;
     margin: 0;
@@ -340,6 +343,13 @@ footer {
     align-items: center;
     width: 100%;
     margin: 0;
+  }
+  nav li a:hover {
+    border-bottom: 2px solid #0065fc;
+    border-top: none;
+    padding-bottom: 10px;
+    position: static;
+    color: #0065fc;
   }
   #presentation {
     width: 100%;
@@ -403,7 +413,7 @@ footer {
   .postpop {
     justify-content: left;
     height: auto;
-    width: 400px;
+    width: 100%;
   }
   .postpop img {
     width: auto;
@@ -429,32 +439,46 @@ footer {
 }
 
 /* 2) Smartphones */
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 320px) {
   #wrapper {
-    width: 360px;
+    width: 100%;
   }
   header img {
     width: 20%;
     padding-top: 20px;
   }
+  nav h2 {
+    display: flex;
+    color: #0065fc;
+    font-size: 0.8em;
+  }
+  .entete-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .signin {
+    display: none;
+  }
   nav {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
   nav ul {
     display: flex;
-    flex-direction: row-reverse;
-    list-style-type: none;
+    flex-direction: row;
   }
   nav li a {
     padding: 20px 10px 0 10px;
   }
   nav li a:hover {
-    border-top: 2px solid #0065fc;
-    padding-top: 20px;
+    border-bottom: 2px solid #0065fc;
+    border-top: none;
+    padding-bottom: 10px;
     position: static;
     color: #0065fc;
   }
+
   #presentation {
     display: flex;
     flex-direction: column;
@@ -559,6 +583,7 @@ footer {
   footer {
     flex-direction: column;
     width: 100%;
+    height: auto;
   }
   .box1,
   .box2,
