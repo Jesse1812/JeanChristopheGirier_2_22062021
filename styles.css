@@ -118,22 +118,21 @@ button {
   display: flex;
 }
 .bouton-filtre {
-  width: 140px;
+  width: auto;
   height: 40px;
   display: flex;
-  justify-content: space-between;
   margin: 5px;
 }
 .bouton-filtre button {
   /* c'est la partie de droite des boutons avec le texte */
   z-index: 1;
   border-radius: 10px;
-  border: 1px solid lightgray;
+  border: 2px solid lightgray;
   margin-left: 15px;
   height: 40px;
   text-align: center;
-  width: 100%;
   background-color: white;
+  padding-left: 30px;
 }
 .bouton-filtre button:hover {
   background-color: #deebff;
@@ -142,8 +141,8 @@ button {
   /* c'est le rond avec le pictogramme */
   position: absolute;
   z-index: 2;
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: #deebff;
   display: flex;
@@ -331,7 +330,7 @@ footer {
 
 /* MEDIA QUERIES 
 1) Tablettes */
-@media only screen and (max-width: 768px) and (min-width: 320px) {
+@media only screen and (max-width: 768px) and (min-width: 375px) {
   body {
     width: 100%;
     margin: 0;
@@ -361,7 +360,8 @@ footer {
     margin-top: 20px;
   }
   .bouton-filtre button {
-    margin-left: 25px;
+    margin-left: 20px;
+    padding-left: 5px;
   }
   #filtres {
     flex-direction: column;
@@ -390,7 +390,7 @@ footer {
   .post {
     width: 400px;
     border-radius: 20px;
-    margin: 0;
+    margin: 10px;
   }
   .post img {
     width: 100%;
@@ -413,7 +413,7 @@ footer {
   .postpop {
     justify-content: left;
     height: auto;
-    width: 100%;
+    width: 400px;
   }
   .postpop img {
     width: auto;
@@ -439,9 +439,10 @@ footer {
 }
 
 /* 2) Smartphones */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 375px) {
   #wrapper {
     width: 100%;
+    margin-left: 10px;
   }
   header img {
     width: 20%;
@@ -478,6 +479,10 @@ footer {
     position: static;
     color: #0065fc;
   }
+  .bouton-filtre button {
+    padding-left: 20px;
+    margin-left: 20px;
+  }
   #presentation {
     display: flex;
     flex-direction: column;
@@ -496,6 +501,7 @@ footer {
   }
   #filtres {
     flex-direction: column;
+    align-items: flex-start;
   }
   #hebergement {
     flex-direction: column-reverse;
@@ -535,23 +541,24 @@ footer {
   }
   aside {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
+    height: auto;
     background-color: #f2f2f2;
     border-radius: 20px;
     margin-left: 10px;
-    align-items: flex-start;
+    align-items: center;
   }
   .postpop {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     height: min-content;
     padding: 5px;
     background-color: white;
     border-radius: 20px;
     margin: 10px;
-    width: 280px;
+    width: 350px;
   }
   .postpop img {
     width: 100px;
@@ -581,6 +588,484 @@ footer {
     flex-direction: column;
     width: 100%;
     height: auto;
+    padding-left: 10px;
+  }
+  .box1,
+  .box2,
+  .box3 {
+    width: 100%;
+  }
+}
+
+/* 3) Iphone X */
+@media only screen and (min-device-width: 375px) and (min-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+  #wrapper {
+    width: 100%;
+    margin-left: 10px;
+  }
+  header img {
+    width: 20%;
+    padding-top: 20px;
+  }
+  nav h2 {
+    display: flex;
+    color: #0065fc;
+    font-size: 0.8em;
+  }
+  .entete-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .signin {
+    display: none;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  nav li a {
+    padding: 20px 10px 0 10px;
+  }
+  nav li a:hover {
+    border-bottom: 2px solid #0065fc;
+    border-top: none;
+    padding-bottom: 10px;
+    position: static;
+    color: #0065fc;
+  }
+  .bouton-filtre button {
+    padding-left: 20px;
+    margin-left: 20px;
+  }
+  #presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #ecrans-grande-taille {
+    display: none;
+  }
+  #query-portable {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: #0065fc;
+    color: white;
+    border-radius: 10px;
+  }
+  #filtres {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #hebergement {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 0;
+  }
+  article {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 20px;
+    height: auto;
+    margin-right: 20px;
+    padding-right: 10px;
+  }
+  .post {
+    background-color: white;
+    padding: 5px;
+    border: 3px solid #f2f2f2;
+    width: 100%;
+    border-radius: 20px;
+    margin: 10px;
+    height: min-content;
+  }
+  .post img {
+    width: 100%;
+    height: 120px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+  }
+  .ligne {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  aside {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    margin-left: 10px;
+    align-items: center;
+  }
+  .postpop {
+    display: flex;
+    justify-content: left;
+    height: min-content;
+    padding: 5px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    width: 350px;
+  }
+  .postpop img {
+    width: 100px;
+    height: 130px;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+  }
+  #activites {
+    margin-top: 50px;
+  }
+  .galerie {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    flex-direction: row;
+  }
+  .paysage img {
+    width: 100%;
+    height: 120px;
+  }
+  .portrait img {
+    width: 100%;
+    height: 120px;
+  }
+  footer {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding-left: 10px;
+  }
+  .box1,
+  .box2,
+  .box3 {
+    width: 100%;
+  }
+}
+
+/* 4) iphone 6+, 6s+, 7+, 8+ */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+  #wrapper {
+    width: 100%;
+    margin-left: 10px;
+  }
+  header img {
+    width: 20%;
+    padding-top: 20px;
+  }
+  nav h2 {
+    display: flex;
+    color: #0065fc;
+    font-size: 0.8em;
+  }
+  .entete-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .signin {
+    display: none;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  nav li a {
+    padding: 20px 10px 0 10px;
+  }
+  nav li a:hover {
+    border-bottom: 2px solid #0065fc;
+    border-top: none;
+    padding-bottom: 10px;
+    position: static;
+    color: #0065fc;
+  }
+  .bouton-filtre button {
+    padding-left: 20px;
+    margin-left: 20px;
+  }
+  #presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #ecrans-grande-taille {
+    display: none;
+  }
+  #query-portable {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: #0065fc;
+    color: white;
+    border-radius: 10px;
+  }
+  #filtres {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #hebergement {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 0;
+  }
+  article {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 20px;
+    height: auto;
+    margin-right: 20px;
+    padding-right: 10px;
+  }
+  .post {
+    background-color: white;
+    padding: 5px;
+    border: 3px solid #f2f2f2;
+    width: 100%;
+    border-radius: 20px;
+    margin: 10px;
+    height: min-content;
+  }
+  .post img {
+    width: 100%;
+    height: 120px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+  }
+  .ligne {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  aside {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    margin-left: 10px;
+    align-items: center;
+  }
+  .postpop {
+    display: flex;
+    justify-content: left;
+    height: min-content;
+    padding: 5px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    width: 350px;
+  }
+  .postpop img {
+    width: 100px;
+    height: 130px;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+  }
+  #activites {
+    margin-top: 50px;
+  }
+  .galerie {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    flex-direction: row;
+  }
+  .paysage img {
+    width: 100%;
+    height: 120px;
+  }
+  .portrait img {
+    width: 100%;
+    height: 120px;
+  }
+  footer {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding-left: 10px;
+  }
+  .box1,
+  .box2,
+  .box3 {
+    width: 100%;
+  }
+}
+
+/* 5) /*iPhone6/7/8*/
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+  #wrapper {
+    width: 100%;
+    margin-left: 10px;
+  }
+  header img {
+    width: 20%;
+    padding-top: 20px;
+  }
+  nav h2 {
+    display: flex;
+    color: #0065fc;
+    font-size: 0.8em;
+  }
+  .entete-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .signin {
+    display: none;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  nav li a {
+    padding: 20px 10px 0 10px;
+  }
+  nav li a:hover {
+    border-bottom: 2px solid #0065fc;
+    border-top: none;
+    padding-bottom: 10px;
+    position: static;
+    color: #0065fc;
+  }
+  .bouton-filtre button {
+    padding-left: 20px;
+    margin-left: 20px;
+  }
+  #presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #ecrans-grande-taille {
+    display: none;
+  }
+  #query-portable {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: #0065fc;
+    color: white;
+    border-radius: 10px;
+  }
+  #filtres {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #hebergement {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 0;
+  }
+  article {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 20px;
+    height: auto;
+    margin-right: 20px;
+    padding-right: 10px;
+  }
+  .post {
+    background-color: white;
+    padding: 5px;
+    border: 3px solid #f2f2f2;
+    width: 100%;
+    border-radius: 20px;
+    margin: 10px;
+    height: min-content;
+  }
+  .post img {
+    width: 100%;
+    height: 120px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+  }
+  .ligne {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  aside {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    margin-left: 10px;
+    align-items: center;
+  }
+  .postpop {
+    display: flex;
+    justify-content: left;
+    height: min-content;
+    padding: 5px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    width: 350px;
+  }
+  .postpop img {
+    width: 100px;
+    height: 130px;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+  }
+  #activites {
+    margin-top: 50px;
+  }
+  .galerie {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    flex-direction: row;
+  }
+  .paysage img {
+    width: 100%;
+    height: 120px;
+  }
+  .portrait img {
+    width: 100%;
+    height: 120px;
+  }
+  footer {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding-left: 10px;
   }
   .box1,
   .box2,
