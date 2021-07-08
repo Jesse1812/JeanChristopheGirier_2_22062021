@@ -126,13 +126,13 @@ button {
 .bouton-filtre button {
   /* c'est la partie de droite des boutons avec le texte */
   z-index: 1;
-  border-radius: 10px;
+  border-radius: 20px;
   border: 2px solid lightgray;
-  margin-left: 15px;
+  margin-left: 0;
   height: 40px;
   text-align: center;
   background-color: white;
-  padding-left: 30px;
+  padding-left: 40px;
 }
 .bouton-filtre button:hover {
   background-color: #deebff;
@@ -360,15 +360,15 @@ footer {
     margin-top: 20px;
   }
   .bouton-filtre button {
-    margin-left: 20px;
-    padding-left: 5px;
+    margin-left: 0;
+    padding-left: 35px;
   }
   #filtres {
     flex-direction: column;
     align-items: center;
   }
   .bouton-filtre {
-    width: 150px;
+    width: 170px;
     height: 40px;
     display: flex;
     flex-direction: column;
@@ -471,6 +471,7 @@ footer {
   }
   nav li a {
     padding: 20px 10px 0 10px;
+    justify-content: space-between;
   }
   nav li a:hover {
     border-bottom: 2px solid #0065fc;
@@ -480,8 +481,8 @@ footer {
     color: #0065fc;
   }
   .bouton-filtre button {
-    padding-left: 20px;
-    margin-left: 20px;
+    padding-left: 20;
+    margin-left: 0;
   }
   #presentation {
     display: flex;
@@ -639,8 +640,8 @@ footer {
     color: #0065fc;
   }
   .bouton-filtre button {
-    padding-left: 20px;
-    margin-left: 20px;
+    padding-left: 20;
+    margin-left: 0;
   }
   #presentation {
     display: flex;
@@ -798,8 +799,8 @@ footer {
     color: #0065fc;
   }
   .bouton-filtre button {
-    padding-left: 20px;
-    margin-left: 20px;
+    padding-left: 20;
+    margin-left: 0;
   }
   #presentation {
     display: flex;
@@ -957,8 +958,8 @@ footer {
     color: #0065fc;
   }
   .bouton-filtre button {
-    padding-left: 20px;
-    margin-left: 20px;
+    padding-left: 20;
+    margin-left: 0;
   }
   #presentation {
     display: flex;
