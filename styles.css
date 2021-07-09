@@ -559,13 +559,16 @@ footer {
     background-color: white;
     border-radius: 20px;
     margin: 10px;
-    width: 350px;
+    width: auto;
   }
   .postpop img {
     width: 100px;
     height: 130px;
     border-radius: 20px 0 0 20px;
     object-fit: cover;
+  }
+  .description {
+    max-width: 160px;
   }
   #activites {
     margin-top: 50px;
@@ -726,6 +729,9 @@ footer {
     border-radius: 20px 0 0 20px;
     object-fit: cover;
   }
+  .description {
+    max-width: 160px;
+  }
   #activites {
     margin-top: 50px;
   }
@@ -885,6 +891,9 @@ footer {
     border-radius: 20px 0 0 20px;
     object-fit: cover;
   }
+  .description {
+    max-width: 160px;
+  }
   #activites {
     margin-top: 50px;
   }
@@ -1043,6 +1052,9 @@ footer {
     height: 130px;
     border-radius: 20px 0 0 20px;
     object-fit: cover;
+  }
+  .description {
+    max-width: 160px;
   }
   #activites {
     margin-top: 50px;
