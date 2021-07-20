@@ -1,6 +1,7 @@
 /* GENERAL */
 #wrapper {
   width: 1024px;
+  margin: auto;
 }
 body {
   font-family: "Raleway", sans-serif;
@@ -329,7 +330,41 @@ footer {
 }
 
 /* MEDIA QUERIES 
-1) Tablettes */
+Affichage < 1040 px responsive */
+@media only screen and (max-width: 1040px) and (min-width: 768px) {
+  #hebergement {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  article {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    height: 650px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-right: 10px;
+  }
+  aside {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+}
+/* 1) Tablettes */
 @media only screen and (max-width: 768px) and (min-width: 375px) {
   body {
     width: 100%;
